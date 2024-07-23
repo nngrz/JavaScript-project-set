@@ -16,7 +16,7 @@ let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
-    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
         return 10
     } else if (randomNumber === 1) {
@@ -56,7 +56,7 @@ function renderGame() {
 
 
 function newCard() {
-    if (isAlive === true && hasBlackJack === false) {
+    if (isAlive === true && !hasBlackJack) {
         let card = getRandomCard()
         sum += card
         cards.push(card)
