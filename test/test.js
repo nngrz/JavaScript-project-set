@@ -1,13 +1,14 @@
-// template strings/literals
+const welcomeEl = document.getElementById("welcome-el")
 
-const recipient = "James"
-const sender = "Per Harald Borgen"
+function greetUser(greeting, name) {
+    // Rewrite the expression using template literals
+    welcomeEl.textContent = '${greeting}, ${name} 👋'
+}
 
-// Break the email string into multiple lines
-const email = `Hey ${recipient}! 
+greetUser("Howdy", "James")
 
-How is it going? 
 
-Cheers ${sender}`
-
-console.log(email)
+// What are greeting and name? parameters
+// What are "Howdy" and "James"? arguments
+// What are num1 and num2? parameters
+// What are 3 and 4? arguments
